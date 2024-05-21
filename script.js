@@ -26,10 +26,10 @@ function newQuote(){
     // Pick a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     // ** Trying to remove the ", type.fit" from the Authors line of data
-    // console.log(quote.author);
-    // quote.author = quote.author.slice(-0, -10);
-    quote.author = quote.author.replace(/, type.fit/g," ");
-    // console.log(quote.author);
+    console.log(quote.author);
+    // quote.author = quote.author.replace(/, type.fit/g," ");
+    quote.author = quote.author.replace(/(, )?type\.fit/, "");
+    console.log(quote.author);
         
     // Check if Author field is blank and replace it with 'Unkown'
     if (!quote.author || quote.author === "type.fit") {
