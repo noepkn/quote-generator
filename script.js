@@ -26,7 +26,7 @@ function newQuote(){
     // Pick a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
-    // ** Remove the ", type.fit" from the Authors line of data
+    // ** Remove the ", type.fit" from the Authors text line
     quote.author = quote.author.replace(/(, )?type\.fit/, "");
         
     // Check if Author field is blank or "type.fit" and replace it with 'Unkown'
